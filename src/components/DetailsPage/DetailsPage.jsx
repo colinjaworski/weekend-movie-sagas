@@ -11,7 +11,7 @@ function DetailsPage() {
         history.push('/')
     };
     // const dispatch = useDispatch();
-    // const movies = useSelector(store => store.movies);
+    const movie = useSelector(store => store.movie);
 
     // useEffect(() => {
     //     dispatch({ type: '' });
@@ -21,6 +21,11 @@ function DetailsPage() {
         <main>
             <h1>MovieDetails</h1>
             <section className="movieDetails">
+                <h3>{movie.title}</h3>
+                <img src={movie.poster} alt={movie.title}
+                    onClick={() => backButton()}/>
+                     <h5>{movie.description}</h5>
+                    <br/>
                 <button
                     onClick={backButton}
                 >Back to Movie List</button>

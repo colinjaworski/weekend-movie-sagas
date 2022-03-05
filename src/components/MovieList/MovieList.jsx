@@ -14,8 +14,13 @@ function MovieList() {
     }, []);
 
     function detailsPage(movie) {
-        console.log('hi!', movie )
-        // history.push('/DetailsPage')
+        console.log('Movie data', movie)
+        dispatch({
+            type: 'SELECTED_MOVIE',
+            payload: movie
+        })
+
+        history.push('/DetailsPage')
     }
 
     return (
@@ -27,7 +32,7 @@ function MovieList() {
                         <div key={movie.id} >
                             <h3>{movie.title}</h3>
                             <img src={movie.poster} alt={movie.title}
-                            onClick={() => detailsPage(movie.id)}
+                                onClick={() => detailsPage(movie)}
                             />
                         </div>
                     );
