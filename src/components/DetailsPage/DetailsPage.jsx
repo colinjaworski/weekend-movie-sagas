@@ -1,9 +1,15 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom'
 
 
 function DetailsPage() {
+    const history = useHistory();
 
+    function backButton() {
+        console.log('button clicked');
+        history.push('/')
+    };
     // const dispatch = useDispatch();
     // const movies = useSelector(store => store.movies);
 
@@ -14,16 +20,11 @@ function DetailsPage() {
     return (
         <main>
             <h1>MovieDetails</h1>
-            {/* <section className="movieDetails">
-                {movies.map(movie => {
-                    return (
-                        <div key={movie.id} >
-                            <h3>{movie.title}</h3>
-                            <img src={movie.poster} alt={movie.title}/>
-                        </div>
-                    );
-                })}
-            </section> */}
+            <section className="movieDetails">
+                <button
+                    onClick={backButton}
+                >Back to Movie List</button>
+            </section>
         </main>
 
     );
