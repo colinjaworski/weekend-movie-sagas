@@ -7,10 +7,16 @@ function MovieList() {
 
     const dispatch = useDispatch();
     const movies = useSelector(store => store.movies);
+    const history = useHistory();
 
     useEffect(() => {
         dispatch({ type: 'FETCH_MOVIES' });
     }, []);
+
+    function detailsPage() {
+        console.log('hi!', movies )
+        // history.push('/DetailsPage')
+    }
 
     return (
         <main>
@@ -20,7 +26,9 @@ function MovieList() {
                     return (
                         <div key={movie.id} >
                             <h3>{movie.title}</h3>
-                            <img src={movie.poster} alt={movie.title}/>
+                            <img src={movie.poster} alt={movie.title}
+                            onClick={detailsPage}
+                            />
                         </div>
                     );
                 })}
