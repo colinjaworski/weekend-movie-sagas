@@ -13,8 +13,8 @@ function MovieList() {
         dispatch({ type: 'FETCH_MOVIES' });
     }, []);
 
-    function detailsPage() {
-        console.log('hi!', movies )
+    function detailsPage(movie) {
+        console.log('hi!', movie )
         // history.push('/DetailsPage')
     }
 
@@ -27,7 +27,7 @@ function MovieList() {
                         <div key={movie.id} >
                             <h3>{movie.title}</h3>
                             <img src={movie.poster} alt={movie.title}
-                            onClick={detailsPage}
+                            onClick={() => detailsPage(movie.id)}
                             />
                         </div>
                     );
