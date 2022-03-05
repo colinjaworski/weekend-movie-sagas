@@ -58,7 +58,7 @@ This should show all details **including ALL genres** for the selected movie, in
  > Hint : You can make a GET request for a specific movie. Remember `req.params` and `:id`?
 ---
 
-### General Considerations
+<!-- ### General Considerations
 
 As one of your last projects, it's possible you will be sharing this with employers, so be sure to follow best practices and make it look good!
 
@@ -69,9 +69,9 @@ As one of your last projects, it's possible you will be sharing this with employ
 - [ ] Comment your code.
 - [ ] Update this README to include a description of the project in your own words.
 
----
+--- -->
 
-## Development Stretch Goals
+<!-- ## Development Stretch Goals
 
 ### 1. Add Movie Form
 
@@ -85,7 +85,7 @@ This should show:
 The Add Movie page should have the buttons:
 
 - `Cancel` button, which should bring the user to the Home/List Page
-- `Save` button, which should save these inputs in the database and bring the user to the Home/List Page (which now has the new movie)
+- `Save` button, which should save these inputs in the database and bring the user to the Home/List Page (which now has the new movie) -->
 
 **Base functionality does not require being able to select more than one genre for a new movie**
 
