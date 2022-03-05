@@ -33,6 +33,8 @@ function MovieList() {
                             <h3>{movie.title}</h3>
                             <img src={movie.poster} alt={movie.title}
                                 onClick={() => detailsPage(movie)}
+                                
+
                             />
                         </div>
                     );
