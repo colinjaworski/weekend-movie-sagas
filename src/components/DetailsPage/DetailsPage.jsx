@@ -28,27 +28,36 @@ function DetailsPage() {
 
     return (
         <main>
-            <h1>MovieDetails</h1>
-            <section className="movieDetails">
-                <h3>{movie.title}</h3>
-                <img src={movie.poster} alt={movie.title}
-                    onClick={() => backButton()} />
-                <h3>Genres:</h3>
+            <section className="description">
+                <h4>{movie.description}</h4>
                 {genres.map((genre, id) => {
                     return (
-                        
+
                         <div key={id} >
                             <h4>{genre.name}</h4>
                         </div>
                     );
                 })}
+                {/* <br /> */}
 
-                <h4>{movie.description}</h4>
-                <br />
+
+
+            </section>
+            {/* <h1>MovieDetails</h1> */}
+            <section className="movieDetails">
+                <h3>{movie.title}</h3>
+                <img className="poster" src={movie.poster} alt={movie.title}
+                    onClick={() => backButton()} />
+                {/* <h3>Genres:</h3> */}
+
+            </section>
+
+            <section>
                 <button
                     onClick={backButton}
                 >Back to Movie List</button>
             </section>
+            
         </main>
 
     );
