@@ -1,34 +1,31 @@
+
 .movies {
     display:grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-gap: 5px;
-    background-color: rgba(0, 0, 0, 0.541);
-    /* padding-left: 5px;
-    padding-right: 5px; */
+    grid-template-columns: 19% 19% 19% 19% 19%;
+    grid-gap: 10px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.poster {
+    cursor:pointer; 
 }
 
 .movieCard {
     box-shadow: -20px -20px 100px 1px rgba(134, 134, 134, 0.294);
     padding-top: 10px;
-   
-
-    /* border-radius: 10%; */
-    /* border: 1px solid; */
 }
 
 .movieTitle {
-color: rgba(255, 255, 255, 0.596);
-
+color: rgba(255, 255, 255, 0.932);
 /* background-color: rgba(0, 255, 242, 0.438); */
 }
-/* 
-.title {
-    font-weight: bolder;
-    color: rgb(2, 2, 2);
-} */
+
 html {
-    /* background-image: linear-gradient(rgba(250, 114, 3, 0.705), rgba(36, 143, 71, 0.932)); */
-background-color: rgb(0, 0, 0);
+    background-image: linear-gradient(rgba(58, 38, 1, 0.938), rgb(29, 22, 28));
+    background-repeat: no-repeat;
+    height: 150%
+/* background-color: rgb(0, 0, 0); */
 }
 
 
@@ -43,10 +40,10 @@ background-color: rgb(0, 0, 0);
     bottom: 0;
     right: 10;
     top: 10px;
-    background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.205));
+    background-color: rgb(169, 177, 149);
     width: 300px;
     height: fit-content;
-    box-shadow: 40px 40px 10px 0px rgba(0, 0, 0, 0.863);
+    box-shadow: 30px 30px 15px 5px rgba(0, 0, 0, 0.863);
     border-radius: 15px;
     margin: auto;
     border-style: solid;
@@ -54,20 +51,26 @@ background-color: rgb(0, 0, 0);
     border-color: rgb(0, 0, 0);
 }
 
-.poster {
+.detailsPoster {
     cursor:pointer; 
 }
 
 .description {  
-    padding: 10px; 
-    margin: 10px;
-    background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.432));
-    width: 90%;
+    border-style: solid;
+    border-width: 1px;
+    padding: 100px; 
+    margin: 20px;
+    background-color: rgb(169, 177, 149);
+    width: 70%;
     border-radius: 15px;
-    /* position:static */
+    box-shadow: 30px 30px 15px 5px rgba(0, 0, 0, 0.863);
+
+    /* color: white */
 }
 button {
     cursor: pointer;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.616);
     color: rgb(255, 255, 255);
+    border-radius: 5px;
 }
+
