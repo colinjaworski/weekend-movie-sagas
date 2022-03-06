@@ -13,7 +13,7 @@ import axios from 'axios';
 
 // Create the rootSaga generator function
 function* rootSaga() {
-    yield takeEvery('FETCH_MOVIES', fetchAllMovies);
+    yield takeEvery('FETCH_MOVIES', fetchAllMovies); // these take commands from other parts of the app and run the cooresponding functions
     yield takeEvery('FETCH_GENRES', fetchGenres);
     
 }
@@ -21,9 +21,9 @@ function* fetchGenres(action) {
     // get all genres from the DB
     console.log(action)
     try {
-        const genres = yield axios.get(`/api/genre/${action.payload.id}`);
-        console.log('get all fucking genres:', genres.data);
-        yield put({ type: 'SET_GENRES', payload: genres.data });
+        const genres = yield axios.get(`/api/genre/${action.payload.id}`); //gets genres from DB 
+        console.log('get all genres:', genres.data);
+        yield put({ type: 'SET_GENRES', payload: genres.data }); // sends information to genres reducer to be set in the store
 
     } catch {
         console.log('get genres error');
@@ -34,9 +34,9 @@ function* fetchGenres(action) {
 function* fetchAllMovies() {
     // get all movies from the DB
     try {
-        const movies = yield axios.get('/api/movie');
+        const movies = yield axios.get('/api/movie'); // gets movies and other data
         console.log('get all:', movies.data);
-        yield put({ type: 'SET_MOVIES', payload: movies.data });
+        yield put({ type: 'SET_MOVIES', payload: movies.data }); // sends data recieved to movies reducer
 
     } catch {
         console.log('get all error');
@@ -67,10 +67,10 @@ const genres = (state = [], action) => {
     }
 }
 
-const movie = (state = {}, action) => {
+const movie = (state = {}, action) => { // movie reducer runs when movie is selected from list page and sends information to store
     switch (action.type) {
         case 'SELECTED_MOVIE':
-            return action.payload;
+            return action.payload; 
         default:
             return state;
     }

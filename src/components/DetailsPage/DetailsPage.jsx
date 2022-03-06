@@ -4,15 +4,15 @@ import { useHistory } from 'react-router-dom'
 
 
 function DetailsPage() {
-    const history = useHistory();
-    const dispatch = useDispatch();
+    const history = useHistory(); // allows user to move back to movieList page 
+    const dispatch = useDispatch(); 
 
 
 
-    useEffect(() => {
-        console.log('in details page useEffect')
-        dispatch({
-            type: 'FETCH_GENRES',
+    useEffect(() => {// fetch_genres runs once on page load
+        console.log('in details page useEffect') 
+        dispatch({ 
+            type: 'FETCH_GENRES', 
             payload: movie
         });
     }, []);
@@ -21,8 +21,8 @@ function DetailsPage() {
         console.log('button clicked');
         history.push('/')
     };
-    // const dispatch = useDispatch();
-    const movie = useSelector(store => store.movie);
+    // sets variables = to cooresponding data held in store
+    const movie = useSelector(store => store.movie); 
     const genres = useSelector(store => store.genres)
     console.log('genre is', genres[0])
 
@@ -32,14 +32,14 @@ function DetailsPage() {
 
             <section className="movieDetails">
                 <h3>{movie.title}</h3>
-                <img className="detailsPoster" src={movie.poster} alt={movie.title}
-                    onClick={() => backButton()} />
+                <img className="detailsPoster" src={movie.poster} alt={movie.title} 
+                    onClick={() => backButton()} /> 
                 {/* <h3>Genres:</h3> */}
             </section>
 
             <section className="description">
                 <h4>{movie.description}</h4>
-                {genres.map((genre, id) => {
+                {genres.map((genre, id) => { //maps through genres to show each cooresponding genre for selected movie
                     return (
 
                         <div key={id} >

@@ -13,7 +13,7 @@ function MovieList() {
         dispatch({ type: 'FETCH_MOVIES' });
     }, []);
 
-    function detailsPage(movie) {
+    function detailsPage(movie) { // function dispatches selected movie and information to movie reducer
         console.log('Movie data', movie)
         dispatch({
             type: 'SELECTED_MOVIE',
@@ -31,7 +31,7 @@ function MovieList() {
                     return (
                         <div className="movieCard" key={movie.id} >
                             <h3 className ="movieTitle">{movie.title}</h3>
-                            <img className="poster" src={movie.poster} alt={movie.title}
+                            <img className="poster" src={movie.poster} alt={movie.title} // when movie is clicked, run detailsPage function
                                 onClick={() => detailsPage(movie)}
                                 
 
