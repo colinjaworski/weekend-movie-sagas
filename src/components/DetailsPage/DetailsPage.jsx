@@ -1,18 +1,19 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom';
+
 
 
 function DetailsPage() {
     const history = useHistory(); // allows user to move back to movieList page 
-    const dispatch = useDispatch(); 
+    const dispatch = useDispatch();
 
 
 
     useEffect(() => {// fetch_genres runs once on page load
-        console.log('in details page useEffect') 
-        dispatch({ 
-            type: 'FETCH_GENRES', 
+        console.log('in details page useEffect')
+        dispatch({
+            type: 'FETCH_GENRES',
             payload: movie
         });
     }, []);
@@ -22,11 +23,13 @@ function DetailsPage() {
         history.push('/')
     };
     // sets variables = to cooresponding data held in store
-    const movie = useSelector(store => store.movie); 
-    const genres = useSelector(store => store.genres)
+    const movie = useSelector(store => store.movie);
+    const genres = useSelector(store => store.genres);
     console.log('genre is', genres[0])
 
-    return (
+
+
+    return(
         <main>
 
 
@@ -52,7 +55,7 @@ function DetailsPage() {
                 >Back to Movie List</button>
             </section>
 
-        </main>
+        </main >
 
     );
 }

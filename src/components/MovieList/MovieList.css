@@ -2,18 +2,28 @@
 .movies {
     display:grid;
     grid-template-columns: 19% 19% 19% 19% 19%;
+    grid-template-rows: 40% 40% 40%;
     grid-gap: 10px;
     padding: 20px;
-    margin: 20px;
+    margin: 20px;  
 }
 
 .poster {
     cursor:pointer; 
 }
 
+.poster:hover {
+height: 75%;
+}
+
+.movieCard:hover {
+    background-color: rgba(250, 235, 215, 0.151);
+}
+
 .movieCard {
     box-shadow: -20px -20px 100px 1px rgba(134, 134, 134, 0.294);
     padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .movieTitle {
@@ -24,7 +34,7 @@ color: rgba(255, 255, 255, 0.932);
 html {
     background-image: linear-gradient(rgba(58, 38, 1, 0.938), rgb(29, 22, 28));
     background-repeat: no-repeat;
-    height: 150%
+    height: 200%
 /* background-color: rgb(0, 0, 0); */
 }
 
@@ -51,8 +61,12 @@ html {
     border-color: rgb(0, 0, 0);
 }
 
-.detailsPoster {
+.detailsPoster{
     cursor:pointer; 
+ 
+}
+.movieDetails:hover {
+    background-color:  rgb(88, 72, 88); ;
 }
 
 .description {  
@@ -67,10 +81,11 @@ html {
 
     /* color: white */
 }
-button {
+button:hover {
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.616);
     color: rgb(255, 255, 255);
     border-radius: 5px;
 }
+
 
