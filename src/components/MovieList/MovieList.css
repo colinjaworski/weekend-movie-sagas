@@ -32,7 +32,7 @@ color: rgba(255, 255, 255, 0.932);
 }
 
 html {
-    background-image: linear-gradient(rgba(58, 38, 1, 0.938), rgb(29, 22, 28));
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(29, 22, 28));
     background-repeat: no-repeat;
     height: 200%
 /* background-color: rgb(0, 0, 0); */
@@ -69,6 +69,12 @@ html {
     background-color:  rgb(88, 72, 88); ;
 }
 
+.description:hover {
+    position:relative;
+    box-shadow: -30px -30px 15px 5px rgba(0, 0, 0, 0.863);
+
+}
+
 .description {  
     border-style: solid;
     border-width: 1px;
@@ -78,7 +84,6 @@ html {
     width: 70%;
     border-radius: 15px;
     box-shadow: 30px 30px 15px 5px rgba(0, 0, 0, 0.863);
-
     /* color: white */
 }
 button:hover {
@@ -86,6 +91,11 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.616);
     color: rgb(255, 255, 255);
     border-radius: 5px;
+   
+}
+button {
+    border-radius: 5px;
+
 }
 
 
